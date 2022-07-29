@@ -8,6 +8,19 @@ body{
     background: rgb(36, 36, 36);
 }
 
+#horap{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#turnop{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
 .cont-temporizador{
     display: flex;
     justify-content: center;

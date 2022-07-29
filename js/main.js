@@ -1,14 +1,18 @@
-let horas = 4;
+let horas = 0; 
 let minutos = 0;
 let segundos = 0;
 
-let turno = "ninguno";
-let horacierre = "11:00";
+/* Datos para Validación Mario */
+let turnop = document.getElementById("turnop").innerText;
+let horap = document.getElementById("horap").innerText;
+
+console.log("El turno actual es:" + turnop);    
+console.log("La hora actual es:" + horap);    
+
+/* Fin de datos para validación Mario */
+
 
 cargarSegundos();
-
-
-
 /* ESTABLECIENDO SEGUNDOS */
 function cargarSegundos() {
     let txtSegundos;
@@ -54,18 +58,36 @@ function cargarMinutos(segundos) {
 }
 
 
+
+
 /* ESTABLECIENDO HORAS */
 function cargarHoras(segundos, minutos) {
     let txtHoras;
+
+
+
     if (segundos == -1 && minutos == 0 && horas !== 0) {
         setTimeout(() => {
             horas--;
         }, 500);
-    }else if(segundos == -1 && minutos == 0 && horas == 0){
+    }else if(segundos == -1 && minutos == 0 && horas == 0){ /* Reset a 2 horas */
         setTimeout(() => {
             horas = 2;
         }, 500);
     }
+
+    
+ /*    if(horap == "03:00 PM"){
+        setTimeout(() => {
+            horas = 2;
+        }, 500);
+    }else if (horap == "09:00 PM"){
+        setTimeout(() => {
+            horas = 13;
+        }, 500);
+    }else{
+        horas = 23;
+    } */
 
     //Mostrar horas en pantalla
     if(horas < 10){
